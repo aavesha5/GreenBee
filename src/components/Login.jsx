@@ -1,10 +1,41 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Logo from './Images/logo.jpg'
 import google from './Images/google-icon.svg'
 import fb from './Images/facebook-icon.svg'
 import lk from './Images/linkedin-icon.svg'
 import './Login.css'
+import validation from './validation';
+
+
 const Login = () => {
+
+  const[values, setValues]=useState({
+    email:"",
+    password:"",
+   });
+
+   const [errors,setErrors]=useState({});
+
+   const handleChange =(event)=>{
+  setValues({
+...values,
+[event.target.name]: event.target.value,
+
+  })
+
+   }
+
+const handleFormSubmit =(event) =>{
+   event.preventDefault();
+   setErrors(validation(values));
+
+  
+};
+
+
+
+
+
   return (
     <>
 <section className='wrapper'>
@@ -15,19 +46,21 @@ const Login = () => {
 <div className='fw-normal text-muted mb-4'>
     New Here? <a href='#' className='text-primary fw-bold text-decoration-none'>Create an Account</a>
 </div>
-<div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+<div className="form-floating mb-3">
+  <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" name='email' value={values.email} onChange={handleChange}/>
   <label for="floatingInput">Email address</label>
+  {errors.email && <p className='error'>{errors.email}</p>}
 </div>
-<div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+<div className="form-floating">
+  <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name='password' value={values.password} onChange={handleChange}/>
   <label for="floatingPassword">Password</label>
+  {errors.password && <p className='error'>{errors.password}</p>}
 </div>
 <div className='mt-2 text-end'>
 <a href='#' className='text-primary fw-bold text-decoration-none'>Forget Password?</a>
 
 </div>
-<button type='submit' className='btn btn-primary submit_btn w-100 my-4'>Login</button>
+<button type='submit' className='btn btn-primary submit_btn w-100 my-4' onClick={handleFormSubmit}>Login</button>
 <div className='text-center text-muted text-uppercase mb-3'>or</div>
 <a href='#' className='btn btn-light login_with w-100 mb-3'>
 <img src={google} className='img-fluid me-3' alt="google" />Continue with Google</a>

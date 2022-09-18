@@ -2,6 +2,8 @@ import React from 'react'
 import './Home.css'
 import hero from '../Images/hero1.png'
 import {NavLink} from 'react-router-dom';
+import FruitSlider from './Slider/FruitSlider';
+import VegSlider from './Slider/VegSlider';
 
 
 
@@ -29,6 +31,12 @@ const Home = () => {
 </div>
     </div>
   </section>
+  <div>
+    <FruitSlider/>
+    </div>
+    <div>
+    <VegSlider/>
+    </div>
   
 
     </>

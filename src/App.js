@@ -7,6 +7,13 @@ import Register from './components/Register/Register';
 import Products from './components/Products/Products';
 import Footer from './components/Home/Footer';
 
+/* 
+npm i bootstrap 
+npm i react-bootstrap 
+npm i react-router-dom
+npm i swiper 
+*/
+
 function App() {
   return (
     <div className="App">

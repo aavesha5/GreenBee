@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import Logo from './Images/logo.jpg'
-import google from './Images/google-icon.svg'
-import fb from './Images/facebook-icon.svg'
-import lk from './Images/linkedin-icon.svg'
+import Logo from '../Images/logo.jpg'
+import google from '../Images/google-icon.svg'
+import fb from '../Images/facebook-icon.svg'
+import lk from '../Images/linkedin-icon.svg'
 import './Login.css'
-import validation from './validation';
+import validation from '../Register/validation.js';
 
 
 const Login = () => {

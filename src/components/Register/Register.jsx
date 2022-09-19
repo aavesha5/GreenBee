@@ -68,17 +68,18 @@ const handleFormSubmit =(event) =>{
   {errors.user && <p className='error'>{errors.user}</p>}
 </div>
 
-<div className="form-floating">
+<div className="form-floating mb-3">
   <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name='password' value={values.password} onChange={handleChange}/>
   <label for="floatingPassword">Password</label>
   {errors.password && <p className='error'>{errors.password}</p>}
 </div>
 
 <div className="form-floating">
-  <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name='cpassword' value={values.cpassword} onChange={handleChange}/>
+  <input type="password" className="form-control" id="floatingPassword" placeholder="Confirm Password" name='cpassword' value={values.cpassword} onChange={handleChange}/>
   <label for="floatingPassword">Confirm Password</label>
   {errors.cpassword && <p className='error'>{errors.cpassword}</p>}
 </div>
+
 <button type='submit' className='btn btn-primary submit_btn w-100 my-4'  onClick={handleFormSubmit}>Register</button>
 <div className='text-center text-muted text-uppercase mb-3'>or</div>
 <NavLink to='/login' className='btn btn-light login_with w-100 mb-3'>

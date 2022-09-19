@@ -12,7 +12,7 @@ const Footer = () => {
 <div className='col-12 col-lg-10 mx-auto'>
 <div className='row'>
   <div className='col-6 col-lg-3'>
-    <h2>Company</h2>
+    <h2 className='title'>Company</h2>
     <ul>
       <li><a href='#'>About</a></li>
       <li><a href='#'>About</a></li>
@@ -21,7 +21,7 @@ const Footer = () => {
       </ul>
   </div>
   <div className='col-6 col-lg-3'>
-    <h2>Support</h2>
+    <h2 className='title'>Support</h2>
     <ul>
       <li><a href='#'>About</a></li>
       <li><a href='#'>About</a></li>
@@ -30,7 +30,7 @@ const Footer = () => {
       </ul>
   </div>
   <div className='col-6 col-lg-3'>
-    <h2>Services</h2>
+    <h2 className='title'>Services</h2>
     <ul>
       <li><a href='#'>About</a></li>
       <li><a href='#'>About</a></li>
@@ -39,7 +39,7 @@ const Footer = () => {
       </ul>
   </div>
   <div className='col-6 col-lg-3'>
-    <h2>Follow Us</h2>
+    <h2 className='title'>Follow Us</h2>
     <div className='row'>
     <div className='col-3 mx-auto'>
     <a href='#'><i className='fab fa-facebook-f fontawesome-style'></i></a>

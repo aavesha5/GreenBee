@@ -4,6 +4,7 @@ import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import './Navbar.css'
 import {NavLink} from 'react-router-dom';
 import Logo from '../Images/logo.jpg'
+import ButtonCartCount from '../Products/CartShopping/ButtonCartCount';
 
 
 const Navbar = () => {
@@ -49,15 +50,20 @@ const Navbar = () => {
         <li className="nav-item">
           <NavLink className="nav-link" to="contact">Contact</NavLink>
         </li>
-        
+
+        <ButtonCartCount/>
         
       </ul>
   
     </div>
+    
   </div>
+  
 </nav>
 
+
 </div>
+
     </div>
 </div>
 

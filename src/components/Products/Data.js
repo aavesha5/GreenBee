@@ -70,79 +70,76 @@ export const menuItemsData = [
       img: '/images/fruits/mango.jpg',
     },
     
+
+    {
+      id: 11,
+      name: 'Brinjal',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/brinjal.jpg'
+    },
+    {
+      id: 12,
+      name: 'Garlic',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Garlic.jpg'
+    },
+    {
+      id: 13,
+      name: 'Onions',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Onions.jpeg'
+    },
+    {
+      id: 14,
+      name: 'Mint',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Mint.jpg'
+    },
+    {
+      id: 15,
+      name: 'Potato',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Potato.jpg'
+    },
+    {
+      id: 16,
+      name: 'Peas',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Peas.jpg'
+    },
+    {
+      id: 17,
+      name: 'Radish',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/radish.jpg'
+    },
+    {
+      id: 18,
+      name: 'Sweet Potato',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/sweet-potato.jpg'
+    },
+    {
+      id: 19,
+      name: 'Tomato',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Tomato.jpg'
+    },
+    {
+      id: 20,
+      name: 'Lady_Finger',
+      info: 'Fresh And Best Quality Veggies.',
+      price: 24,
+      img: '/images/veggies/Lady_Finger.jpg'
+    },
+    
   ];
-
-export const VegItemsData = [
-  {
-    id: 1,
-    name: 'Brinjal',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/brinjal.jpg'
-  },
-  {
-    id: 2,
-    name: 'Garlic',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Garlic.jpg'
-  },
-  {
-    id: 3,
-    name: 'Onions',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Onions.jpeg'
-  },
-  {
-    id: 4,
-    name: 'Mint',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Mint.jpg'
-  },
-  {
-    id: 5,
-    name: 'Potato',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Potato.jpg'
-  },
-  {
-    id: 6,
-    name: 'Peas',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Peas.jpg'
-  },
-  {
-    id: 7,
-    name: 'Radish',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/radish.jpg'
-  },
-  {
-    id: 8,
-    name: 'Sweet Potato',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/sweet-potato.jpg'
-  },
-  {
-    id: 9,
-    name: 'Tomato',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Tomato.jpg'
-  },
-  {
-    id: 10,
-    name: 'Lady_Finger',
-    info: 'Fresh And Best Quality Veggies.',
-    price: 24,
-    img: '/images/veggies/Lady_Finger.jpg'
-  },
-  
-
-]

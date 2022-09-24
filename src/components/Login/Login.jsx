@@ -48,12 +48,12 @@ const handleFormSubmit =(event) =>{
 </div>
 <div className="form-floating mb-3">
   <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" name='email' value={values.email} onChange={handleChange}/>
-  <label for="floatingInput">Email address</label>
+  <label htmlFor="floatingInput">Email address</label>
   {errors.email && <p className='error'>{errors.email}</p>}
 </div>
 <div className="form-floating">
   <input type="password" className="form-control" id="floatingPassword" placeholder="Password" name='password' value={values.password} onChange={handleChange}/>
-  <label for="floatingPassword">Password</label>
+  <label htmlFor="floatingPassword">Password</label>
   {errors.password && <p className='error'>{errors.password}</p>}
 </div>
 <div className='mt-2 text-end'>

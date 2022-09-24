@@ -7,7 +7,7 @@ const VegCard = props =>{
     return (
      <Card className='h-100 p-0 overflow-hidden shadow img-fluid'>
         <div className='overflow-hidden rounded p-0 bg-light'>
-        <CardImg src={imgSrc} top width="100%" height="150vw" object-fit= "cover"/> 
+        <CardImg src={imgSrc} width="100%" height="150vw" object-fit= "cover"/> 
          </div>
         <Card.Body className="text-center ">
             <Card.Title className="display-10">

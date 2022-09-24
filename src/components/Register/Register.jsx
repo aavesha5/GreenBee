@@ -77,12 +77,14 @@ useEffect(()=>{
 <div className="form-floating mb-3">
   <input type="text" className="form-control" id="username" placeholder="rochel" autoComplete="off" name='user' value={values.user} onChange={handleChange}/>
   <label htmlFor="username">Username</label>
+  <small>Hint:username only contains alphanumeric values '.'&'_' are allowed in between only.</small>
   {errors.user && <p className='error'>{errors.user}</p>}
 </div>
 
 <div className="form-floating mb-3">
   <input type="password" className="form-control" id="password" placeholder="Password" autoComplete="off" name='password' value={values.password} onChange={handleChange}/>
   <label htmlFor="password">Password</label>
+  <small>Hint:password must contain one uppercase,one lowercase letter,one digit and one symbol.</small>
   {errors.password && <p className='error'>{errors.password}</p>}
 </div>
 

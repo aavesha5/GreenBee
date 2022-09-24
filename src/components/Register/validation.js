@@ -6,10 +6,15 @@ let errors={};
 if(!values.fullname){
     errors.fullname="Name is required"
 }
+else if (!/^[a-zA-Z]+ [a-zA-Z]+$/.test(values.fullname)){
+    errors.fullname="Enter valid name."
+    } 
+
+
 
 if(!values.email){
     errors.email="Email is required"
-} else if (!/\S+@\S+\.\S+/.test(values.email)){
+} else if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values.email)){
 errors.email="Email is invalid"
 }
 
@@ -17,15 +22,15 @@ errors.email="Email is invalid"
 if (!values.mobile){
     errors.mobile="Contact number is required ."
     }
-    else if (values.mobile.length > 10){
+    else if (!/^[0-9]{10}$/.test(values.mobile)){
         errors.mobile="Enter valid contact number."
         } 
 
         if (!values.user){
             errors.user="Username is required."
             }
-            else if (values.user.length > 8){
-                errors.user="Username must be within eight characters ."
+            else if (!/^(?=[a-zA-Z0-9._]{5,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/.test(values.user) ){
+                errors.user="Username must be alphanumeric and '.' or'_' in between."
                 } 
 
 

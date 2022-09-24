@@ -36,7 +36,7 @@ if (!values.mobile){
 
 if(!values.password){
     errors.password="Password is required"
-} else if (!/^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{10,16}$/.test(values.password)){
+} else if (!/^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{8,20}$/.test(values.password)){
 errors.password="Password is not valid."
 }
 

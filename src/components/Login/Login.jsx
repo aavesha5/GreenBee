@@ -1,10 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Logo from '../Images/logo.jpg'
-import google from '../Images/google-icon.svg'
-import fb from '../Images/facebook-icon.svg'
-import lk from '../Images/linkedin-icon.svg'
+
 import './Login.css'
-import validation from '../Register/validation.js';
 
 
 const Login = () => {
@@ -16,7 +13,12 @@ const Login = () => {
 
    const [errors,setErrors]=useState({});
 
+   const [isSubmit,setIsSubmit]=useState(false);
+
    const handleChange =(event)=>{
+    const name=event.target.name;
+      const value=event.target.value;
+      console.log(name, value);
   setValues({
 ...values,
 [event.target.name]: event.target.value,
@@ -27,12 +29,34 @@ const Login = () => {
 
 const handleFormSubmit =(event) =>{
    event.preventDefault();
-   setErrors(validation(values));
-
+   setErrors(validate(values));
+   setIsSubmit(true);
   
 };
 
+useEffect(()=>{
+  console.log(errors);
+  if(Object.keys(errors).length === 0 && isSubmit){console.log(values)}
+},[errors])
 
+
+const validate =(values)=> {
+const errors={};
+
+if(!values.email){
+  errors.email="Email is required"
+} else if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values.email)){
+errors.email="Email is invalid"
+}
+
+if(!values.password){
+  errors.password="Password is required"
+} else if (!/^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{8,20}$/.test(values.password)){
+errors.password="Password is not valid."
+}
+
+return errors;
+};
 
 
 
@@ -61,15 +85,7 @@ const handleFormSubmit =(event) =>{
 
 </div>
 <button type='submit' className='btn btn-primary submit_btn w-100 my-4' onClick={handleFormSubmit}>Login</button>
-<div className='text-center text-muted text-uppercase mb-3'>or</div>
-<a href='#' className='btn btn-light login_with w-100 mb-3'>
-<img src={google} className='img-fluid me-3' alt="google" />Continue with Google</a>
 
-<a href='#' className='btn btn-light login_with w-100 mb-3'>
-<img src={fb} className='img-fluid me-3' alt="fb" />Continue with Facebook</a>
-
-<a href='#' className='btn btn-light login_with w-100 mb-3'>
-<img src={lk} className='img-fluid me-3' alt="linkedin" />Continue with LinkedIn</a>
 </form>
 
 

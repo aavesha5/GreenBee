@@ -10,7 +10,8 @@ const Register = () => {
 
     
     const[values, setValues]=useState({
-     fullname:"",
+     fname:"",
+     lname:"",
      email:"",
      mobile:"",
      user:"",
@@ -57,9 +58,14 @@ useEffect(()=>{
 <form className='rounded bg-white shadow p-5'>
 <h2 className='text-dark fw-bolder fs-4 mb-2'>Register</h2>
 <div className="form-floating mb-3">
-  <input type="text" className="form-control" id="name" placeholder="fullname" autoComplete="off" name='fullname' value={values.fullname} onChange={handleChange}/>
-  <label htmlFor="name">Full Name</label>
-  {errors.fullname && <p className='error'>{errors.fullname}</p>}
+  <input type="text" className="form-control" id="fname" placeholder="fname" autoComplete="off" name='fname' value={values.fname} onChange={handleChange}/>
+  <label htmlFor="fname">First Name</label>
+  {errors.fname && <p className='error'>{errors.fname}</p>}
+</div>
+<div className="form-floating mb-3">
+  <input type="text" className="form-control" id="lname" placeholder="lname" autoComplete="off" name='lname' value={values.lname} onChange={handleChange}/>
+  <label htmlFor="lname">Last Name</label>
+  {errors.lname && <p className='error'>{errors.lname}</p>}
 </div>
 <div className="form-floating mb-3">
   <input type="email" className="form-control" id="email" placeholder="name@example.com" autoComplete="off" name='email' value={values.email} onChange={handleChange}/>

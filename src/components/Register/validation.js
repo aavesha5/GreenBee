@@ -3,11 +3,19 @@ const validation = (values) => {
 
 let errors={};
 
-if(!values.fullname){
-    errors.fullname="Name is required"
+if(!values.fname){
+    errors.fname="First name is required"
 }
-else if (!/^[a-zA-Z]+ [a-zA-Z]+$/.test(values.fullname)){
-    errors.fullname="Enter valid name."
+else if (!/^[a-zA-Z]{5,20}$/.test(values.fname)){
+    errors.fname="Enter valid name."
+    } 
+
+
+if(!values.lname){
+    errors.lname="Last name is required"
+}
+else if (!/^[a-zA-Z]{5,20}$/.test(values.lname)){
+    errors.lname="Enter valid name."
     } 
 
 
